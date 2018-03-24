@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/SplashScreen"
+    android:background="@drawable/splash_screen"
     tools:context="com.infosysproject.healthcare.SplashScreen">
 
 </android.support.constraint.ConstraintLayout>
