@@ -97,9 +97,11 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                 if (response.startsWith("Patient")) {
                     Intent intent = new Intent(LoginActivity.this, Patient.class);
+                    intent.putExtra("UserId", user_id);
                     startActivity(intent);
                 } else if (response.startsWith("Doctor")) {
                     Intent intent = new Intent(LoginActivity.this, Doctor.class);
+                    intent.putExtra("UserId", user_id);
                     startActivity(intent);
                 }
             }

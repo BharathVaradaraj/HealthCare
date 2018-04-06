@@ -29,7 +29,7 @@
             android:name=".DoctorPage"
             android:label="@string/title_activity_doctor_home_page"
             android:theme="@style/AppCompat.Modified" />
-        <activity android:name=".Doctor"></activity>
+        <activity android:name=".Doctor" />
     </application>
 
 </manifest>
