@@ -12,10 +12,10 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder> {
 
-    ArrayList arrayList = new ArrayList();
+    ArrayList<PatientData> arrayList;
     Context context;
 
-    public RecyclerAdapter(ArrayList arrayList, Context context){
+    public RecyclerAdapter(ArrayList<PatientData> arrayList, Context context){
         this.arrayList = arrayList;
         this.context = context;
     }
@@ -29,7 +29,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        holder.info.setText(arrayList.get(position).toString());
+        PatientData patientData = arrayList.get(position);
+        holder.info.setText(patientData.getName()+ " " + patientData.getPatient_id());
+        holder.time.setText(patientData.getTime());
     }
 
     @Override
@@ -39,22 +41,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView info;
-        ArrayList arrayList;
+        TextView info, time;
+        ArrayList<PatientData> arrayList;
         Context context;
 
-        public RecyclerViewHolder(View itemView, ArrayList arrayList, Context context) {
+        public RecyclerViewHolder(View itemView, ArrayList<PatientData> arrayList, Context context) {
             super(itemView);
 
             this.context = context;
             this.arrayList = arrayList;
             itemView.setOnClickListener(this);
             info = itemView.findViewById(R.id.info);
+            time = itemView.findViewById(R.id.time);
         }
 
         @Override
         public void onClick(View view) {
-            String patient_id = arrayList.get(getAdapterPosition()).toString();
+            String patient_id = arrayList.get(getAdapterPosition()).getPatient_id();
 
             Intent intent = new Intent(this.context, DoctorPage.class);
             intent.putExtra("Patient_Id", patient_id);

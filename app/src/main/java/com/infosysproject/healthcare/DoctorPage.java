@@ -66,7 +66,10 @@ public class DoctorPage extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             switch (position){
-                case 0:DoctorHomePage doctorHomePage = new DoctorHomePage();
+                case 0: Bundle bundle = new Bundle();
+                        bundle.putString("Patient_Id", getIntent().getStringExtra("Patient_Id"));
+                        DoctorHomePage doctorHomePage = new DoctorHomePage();
+                        doctorHomePage.setArguments(bundle);
                         return doctorHomePage;
 
                 case 1:Tests tests = new Tests();

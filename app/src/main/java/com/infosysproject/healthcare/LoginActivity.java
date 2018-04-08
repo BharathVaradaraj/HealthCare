@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 String patient_login = "http://192.168.137.1/HealthCare/patient_login.py";
                 String doctor_login = "http://192.168.137.1/HealthCare/doctor_login.py";
 
-                Log.d("userid", user_id + " " +check);
+                Log.d("userid", pwd + " " +check);
                 //assign proper url according to the user_id
                 try {
                     if (check.equals("HC"))
