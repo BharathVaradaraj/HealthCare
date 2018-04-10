@@ -3,8 +3,8 @@
     <string name="title_activity_patient_home_page">PatientHomePage</string>
     <string name="patient_tab_text_1">Home</string>
     <string name="patient_tab_text_2">Appointment</string>
-    <string name="patient_tab_text_3">Prescription</string>
-    <string name="patient_tab_text_4">Bills</string>
+    <string name="patient_tab_text_3">Tests</string>
+    <string name="patient_tab_text_4">Medicines</string>
     <string name="doctor_tab_text_1">Home</string>
     <string name="doctor_tab_text_2">Tests</string>
     <string name="doctor_tab_text_3">Medicines</string>

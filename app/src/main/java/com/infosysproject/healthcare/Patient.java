@@ -71,13 +71,13 @@ public class Patient extends AppCompatActivity {
                         patientAppointments.setArguments(bundle);
                         return patientAppointments;
 
-                case 2: Prescription prescription = new Prescription();
-                        prescription.setArguments(bundle);
-                        return prescription;
+                case 2: PatientTests patientTests = new PatientTests();
+                        patientTests.setArguments(bundle);
+                        return patientTests;
 
-                case 3: Bills bills = new Bills();
-                        bills.setArguments(bundle);
-                        return bills;
+                case 3: PatientMedicines patientMedicines = new PatientMedicines();
+                        patientMedicines.setArguments(bundle);
+                        return patientMedicines;
 
                 default:return null;
             }
